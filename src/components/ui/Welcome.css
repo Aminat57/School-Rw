@@ -1,0 +1,110 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 5%;
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.welcome-card {
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.welcome-card:hover {
+  transform: scale(1.02);
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #047857;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-text {
+  color: #374151;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  text-align: justify;
+  max-width: 900px;
+}
+
+/* Gallery Styling */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 1rem;
+}
+
+/* Wrapper for image and caption */
+.image-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+  transform: scale(1.03);
+}
+
+.welcome-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+/* Optional caption styling */
+.image-caption {
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #1f2937;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+/* Responsive text + layout */
+@media (max-width: 768px) {
+  .welcome-title {
+    font-size: 2rem;
+  }
+
+  .welcome-text {
+    font-size: 1rem;
+  }
+
+  .welcome-card {
+    padding: 2rem;
+  }
+}

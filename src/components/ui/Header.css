@@ -1,0 +1,96 @@
+/* Header container styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #090a43;
+  color: #23ffc1dd;
+  position: relative;
+}
+
+/* School Name */
+.school-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  flex: 1;
+  text-align: left;
+}
+
+/* Always Visible Search Bar */
+.search-bar-container {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  width: 60%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.search-bar:focus {
+  border-color: #059669;
+}
+
+/* Navigation Bar */
+.nav-bar {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+}
+
+/* Individual Link Styling */
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f4b400;
+}
+/* Clickable School Name */
+.school-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Keep text color same as normal text */
+  transition: color 0.3s ease-in-out;
+}
+
+.school-link:hover {
+  color: #f4b400; /* Changes color on hover */
+}
+/* Ensure nav items stay in a row */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Ensures 'Student Portal' remains on one line */
+.student-portal-text {
+  display: inline-block;
+  white-space: nowrap;
+}

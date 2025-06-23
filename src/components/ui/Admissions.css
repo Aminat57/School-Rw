@@ -1,0 +1,145 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+}
+
+/* Background container - full screen */
+.admissions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 2rem; /* Adds spacing */
+  background-color: #f3f4f6; /* Light gray background */
+  min-height: 100vh; /* Full screen height */
+  width: 100vw; /* Ensures full width */
+  box-sizing: border-box;
+}
+
+/* Admissions card styling */
+.admissions-card {
+  width: 100%;
+  max-width: 1000px; /* Keeps it readable */
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.admissions-card:hover {
+  transform: scale(1.03); /* Keeps hover effect */
+}
+
+/* Title */
+.admissions-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #047857; /* Green-700 */
+  margin-bottom: 1.5rem;
+}
+
+/* Paragraphs */
+.admissions-text {
+  color: #374151; /* Gray-700 */
+  line-height: 1.8;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+/* Grid layout for steps */
+.admissions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .admissions-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+  }
+}
+
+/* Wildcard step styles */
+.admissions-step,
+.admissions-dates {
+  background: var(--step-bg, #e0f2fe); /* Default to light blue */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.admissions-step:hover,
+.admissions-dates:hover {
+  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Dynamic background colors for steps */
+.admissions-step:nth-child(odd) {
+  --step-bg: #d1fae5; /* Light green */
+}
+
+.admissions-step:nth-child(even) {
+  --step-bg: #d1fae5; /* Light yellow */
+}
+
+/* Key dates box */
+.admissions-dates {
+  --step-bg: #1d3d48; /* Light orange */
+  margin-bottom: 2rem;
+}
+
+/* Wildcard button styles */
+.admissions-btn {
+  background: var(--btn-bg, #047857); /* Default green */
+  color: white;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+
+.admissions-btn:hover {
+  background: var(--btn-hover-bg, #065f46); /* Darker green */
+  transform: scale(1.05);
+}
+
+/* Additional button variants */
+.admissions-btn.primary {
+  --btn-bg: #2563eb; /* Blue */
+  --btn-hover-bg: #1e40af; /* Darker blue */
+}
+
+.admissions-btn.secondary {
+  --btn-bg: #facc15; /* Yellow */
+  --btn-hover-bg: #eab308; /* Darker yellow */
+}
+
+.admissions-btn.tertiary {
+  --btn-bg: #dc2626; /* Red */
+  --btn-hover-bg: #b91c1c; /* Darker red */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admissions-title {
+    font-size: 2rem;
+  }
+
+  .admissions-text {
+    font-size: 1.1rem;
+  }
+}

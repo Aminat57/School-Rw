@@ -1,0 +1,81 @@
+/* Full-screen map container */
+.map-container {
+    width: 100vw; /* Ensure full width */
+    height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f6; /* Light gray background */
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Title */
+.map-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #047857;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Description */
+.map-description {
+    color: #374151;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+/* Google Map */
+.map-frame {
+    width: 100%;
+    max-width: 1200px;
+    height: 60vh; /* Large map */
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Center button */
+.map-button {
+    background-color: #047857;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+/* Button hover effect */
+.map-button:hover {
+    background-color: #065f46;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .map-title {
+        font-size: 2rem;
+    }
+    
+    .map-description {
+        font-size: 1.1rem;
+    }
+
+    .map-frame {
+        height: 50vh; /* Smaller height on mobile */
+    }
+
+    .map-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
