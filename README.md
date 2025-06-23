@@ -1,4 +1,4 @@
-# Bright Future Primary School Website
+# Primary School Website
 
 This is a React-based school website with a structured component layout, including pages for Welcome, Admissions, Academics, Contact, and a NotFound page. The project uses modern UI libraries for styling and interactivity.
 
